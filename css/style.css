@@ -209,7 +209,7 @@ display: none;
    margin: 100px 10px 50px 10px;
 }
 
-.main h2{
+.main h1{
     text-align: center;
     font-size: 30px;
     font-family: Opificio;
@@ -329,9 +329,11 @@ button {
 */
 
 .imgdrama a{
-   color: #373636;
+   color: #5c5b5b;
    text-decoration: underline;
    margin-bottom: 10px;
+   font-size: 20px;
+   text-align: center;
    
 }
 
@@ -354,6 +356,11 @@ button {
     background-color: rgba(236, 235, 235, 0.467);
     border-radius: 10px;
 }
+.textabout h2{
+    text-align: center;
+    font-size: 30px;
+    font-family: Opificio;
+}
 
 .textabout p{
     text-align: center;
@@ -362,12 +369,6 @@ button {
     font-family:'SF Compact Display';
     color: rgb(79, 79, 79);
     margin: 0px 100px; 
-}
-
-.textabout h1{
-    font-family: Opificio;
-    text-align: center;
-    font-size: 25px;
 }
 .secondimg{
   
@@ -438,7 +439,7 @@ color:#2C2C2C;
 
 .formulaire h1{
     font-family: Opificio;
-    font-size:40px;
+    font-size:30px;
     text-align: center;
 }
 
@@ -452,6 +453,29 @@ form{
     margin-top: 5%;
     margin-left: 10%;
 }
+
+form label{
+    font-family: 'SF Compact Display';
+    color: rgb(53, 53, 53);
+    font-weight: 600;
+}
+
+form input{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color:#ffd5b1;
+    font-family: 'SF Compact Display';
+    padding: 3%;
+    font-size: 15px;
+}
+
+form textarea{
+    margin-top: 2%;
+    background-color:#ffd5b1;
+    font-family: 'SF Compact Display';
+    font-size: 15px;
+}
+
 
 .submitcontact{
     background-color:#FFBA7E; 
@@ -467,4 +491,28 @@ form{
     text-transform: uppercase;
 }
 
+.orange{
+    color: #FFBA7E;
+}
 
+.listedesdramas li{
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'SF Compact Display';
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.boutonnumber{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+.boutonnumber input{
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    color:white;
+    font-weight: 600;
+}
