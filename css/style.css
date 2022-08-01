@@ -54,6 +54,7 @@ nav {
     font-size: 25px;
     font-weight: 600;
     font-family: Opificio;
+    margin-left: 2%;
 }
 
 nav ul {
@@ -224,7 +225,6 @@ display: none;
 .main p{
     text-align: center;
     font-size: 20px;
-    display: inline-block;
     font-family:'SF Compact Display';
     color: rgb(53, 53, 53);
 }
@@ -234,6 +234,10 @@ display: none;
     color: #fff;
     font-size: 20px;
     text-transform: uppercase;
+}
+
+.main span{
+    font-weight: 600;
 }
 
 
@@ -345,7 +349,8 @@ button {
 .about{
     background: url("../img/fishcake.jpg") no-repeat;
     background-size: 100%;
-    padding: 10% 10%;
+    position: relative;
+    height: 65vh;
 }
 
 .textabout{
@@ -355,20 +360,26 @@ button {
     width: 100%;
     background-color: rgba(236, 235, 235, 0.467);
     border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+  
+ 
 }
 .textabout h2{
     text-align: center;
-    font-size: 30px;
+    font-size: 18px;
     font-family: Opificio;
 }
 
 .textabout p{
+    margin-top: 0px;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     display: inline-block;
     font-family:'SF Compact Display';
     color: rgb(79, 79, 79);
-    margin: 0px 100px; 
+    
 }
 .secondimg{
   
@@ -450,8 +461,7 @@ color:#2C2C2C;
 }
 
 form{
-    margin-top: 5%;
-    margin-left: 10%;
+    margin : 15px;
 }
 
 form label{
@@ -515,4 +525,14 @@ form textarea{
     font-size: 20px;
     color:white;
     font-weight: 600;
+}
+
+.emailform {
+    margin: 10%;
+    font-family: 'SF Compact Display';
+    text-align: justify;
+}
+
+.detailsreview p{
+    text-align: left;
 }
