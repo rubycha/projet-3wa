@@ -176,32 +176,8 @@ input[type="checkbox"] {
     list-style: none;
     /*padding-top: 4rem;
 }
-
-.hamburger {
-    position: fixed;
-    z-index: 100;
-    top: 1.5rem;
-    right: 3rem;
-    cursor: pointer;
-    margin: auto;
-    font-size: 30px;
-}
-/*
-.showMenu {
-    transform: translateY(0);
-  }
 */
-/*
-.main{
-    display:flex;
-}*/
 
-/*
-.text{
-    margin-top: 100px;
-    padding : 0px 50px 0px 50px
-}
-*/
 .firstimg{
 display: none;
 }
@@ -535,4 +511,55 @@ form textarea{
 
 .detailsreview p{
     text-align: left;
+}
+
+.dashboard{
+    margin: 10%;
+
+}
+
+.dashboard button{
+    font-size: 20px;
+}
+
+.dashbord-index{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'SF Compact Display';
+    text-align: center;
+}
+
+.dashbord-index div {
+    border: 1px solid black; 
+    width: 100%;  
+}
+
+.dashbord-index a{
+    text-decoration: underline;
+}
+
+.dashboard-pages{
+    border: 1px solid black; 
+    padding: 2%;
+}
+
+.timestamp{
+    font-size: 10px;
+}
+
+.edit{
+    float: right;
+}
+
+.dashboard-nav{
+width: 100%;
+display: flex;
+justify-content: space-around;
+border: 1px solid black; 
+
+}
+
+.dashboard-nav p{
+    display: inline-block;
+    
 }
