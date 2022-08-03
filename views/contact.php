@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css">
-    
-</head>
-<body>
-    <nav>
-        <div class="logo">Sweet Hanguk Dreams</div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-            <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Index</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
+
         <section class="formulaire">
             <h1>Get in Touch</h1>
             <p>Got a comment or a more general 
@@ -52,10 +24,8 @@
                 </div>
                 <div>
                     <label for="message">Your Message*</label>
-                <div>
                 </div>
                 <textarea name="comment" rows="12" cols="35" placeholder="Leave me your message here"></textarea>
-                </div>
                 <div>
                     <input class="submitcontact" type="submit" name="SUBMIT" id="submit" value="SUBMIT">
                 </div>
@@ -69,21 +39,4 @@
 <p>Advertisers - advertising@charlie.com</p>
             
         </section>
-    </main>
-            
-<footer>
-    <section class="bgfooter">
-       <h5> Suscribe to my newsletter</h5>
-        <div>
-            <label for="email">Email Address* :</label>
-        </div>
-        <div>
-            <input class="mail" type="mail" id="mail" name="mail">
-        </div>
-        <div>
-            <input class="submit" type="submit" name="SUBMIT" id="submit" value="SUBMIT">
-        </div>
-    </section>
-</footer>
-</body>
-</html>
+   
