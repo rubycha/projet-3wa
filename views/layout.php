@@ -29,7 +29,7 @@
         </nav>
     <main>
         <?php
-        echo $content
+        include_once $view;
         ?>
     </main>
     <footer>

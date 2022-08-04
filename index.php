@@ -1,19 +1,51 @@
 <?php
 
-// On inclut la connexion à la base
-require_once('connect.php');
+spl_autoload_register(function($class)
+{
+   require lcfirst(str_replace('\\', '/',$class)) . '.php';
+   
+});
 
-// On écrit notre requête
-$sql = 'SELECT * FROM `liste`';
+if(array_key_exists('route', $_GET))
+{
+    switch($_GET['route'])
+    {
+        case 'home': 
+            $controller = new Controllers\FrontController();
+            $controller->displayHome();
+            break;
+        case 'index':
+            $controller = new Controllers\FrontController();
+            $controller->displayIndex();
+            break;
+        case 'reviews':
+            $controller = new Controllers\FrontController();
+            $controller->displayReviews();
+            break;
+        case 'review':
+            $controller = new Controllers\FrontController();
+            $controller->displayReview();
+            break;
+        case 'about':
+            $controller = new Controllers\FrontController();
+            $controller->displayAbout();
+            break;
+        case 'contact':
+            $controller = new Controllers\FrontController();
+            $controller->displayContact();
+            break;
 
-// On prépare la requête
-$query = $db->prepare($sql);
-
-// On exécute la requête
-$query->execute();
-
-// On stocke le résultat dans un tableau associatif
-$result = $query->fetchAll(PDO::FETCH_ASSOC);
-
-require_once('close.php');
-?>
+        case 'admin':
+            $controller = new Controllers\FrontController();
+            $controller->displayAdmin();
+            break;
+           
+        default:
+        header('Location: index.php?route=home');
+        exit();
+        break;
+    }
+} else {
+    header('Location: index.php?route=home');
+    exit();
+}
