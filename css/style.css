@@ -338,6 +338,8 @@ button {
     padding: 0;
 }
 
+/* <----- deuxième section de la page about -----> */
+
 .aboutnumbers{
     background-color: #FAF7EF;
     padding-bottom: 5%;
@@ -360,6 +362,8 @@ color:#2C2C2C;
     margin: auto;
     color:#2C2C2C;
 }
+
+/* <----- footer -----> */
 
 .bgfooter{
     padding-top: 5%;
@@ -393,6 +397,8 @@ color:#2C2C2C;
     width: 200px;
     height: 33px;
 }
+
+/* <----- formulaire contact -----> */
 
 .formulaire{
     margin-top: 15%;
@@ -451,6 +457,14 @@ form textarea{
     text-transform: uppercase;
 }
 
+.emailform {
+    margin: 10%;
+    font-family: 'SF Compact Display';
+    text-align: justify;
+}
+
+/* <----- page index dramas -----> */
+
 .orange{
     color: #FFBA7E;
 }
@@ -477,15 +491,14 @@ form textarea{
     font-weight: 600;
 }
 
-.emailform {
-    margin: 10%;
-    font-family: 'SF Compact Display';
-    text-align: justify;
-}
+/* <----- article review -----> */
+
 
 .detailsreview p{
     text-align: left;
 }
+
+/* <----- css du back office -----> */
 
 .dashboard{
     margin: 10%;

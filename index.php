@@ -49,3 +49,4 @@ if(array_key_exists('route', $_GET))
     header('Location: index.php?route=home');
     exit();
 }
+
