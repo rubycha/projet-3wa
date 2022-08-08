@@ -1,0 +1,17 @@
+{
+    "name": "charlottechristmas/projet",
+    "autoload": {
+        "psr-4": {
+            "Charlottechristmas\\Projet\\": "src/",
+            "Router\\": "routes/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Charlotte CHRISTMAS",
+            "email": "charlotte.christmas@escen.fr"
+        }
+    ],
+    "require": {}
+}
