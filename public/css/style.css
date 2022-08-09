@@ -295,7 +295,7 @@ button {
   /* <----- deuxième section de la page home -----> */
 
 .about{
-    background: url("../img/fishcake.jpg") no-repeat;
+    background: url("../../img/fishcake.jpg") no-repeat;
     background-size: cover;
     position: relative;
     height: 60vh;

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class FrontController
+class FrontController extends Controller
 {
     public function home()
     {

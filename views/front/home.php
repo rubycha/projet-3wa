@@ -14,7 +14,7 @@
                 </div>
             </div>
             <figure class="imgstreet">
-                <img class="firstimg" src="../img/street.jpg" alt="photo home">
+                <img class="firstimg" src="../../img/street.jpg" alt="photo home">
             </figure>
         </section>
         <section class="firstsection">

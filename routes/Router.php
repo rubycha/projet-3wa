@@ -2,6 +2,8 @@
 
 namespace Router;
 
+use App\Exceptions\NotFoundException;
+
 class Router {
 
     public $url;

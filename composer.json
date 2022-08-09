@@ -2,9 +2,9 @@
     "name": "charlottechristmas/projet",
     "autoload": {
         "psr-4": {
-            "Charlottechristmas\\Projet\\": "src/",
             "Router\\": "routes/",
-            "App\\": "app/"
+            "App\\": "app/",
+            "Database\\": "connect/"
         }
     },
     "authors": [
