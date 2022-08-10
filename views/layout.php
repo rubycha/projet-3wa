@@ -20,10 +20,10 @@
                 <i class="fas fa-bars"></i>
             </label>
             <ul>
-                <li><a class="active" href="#">Home</a></li>
+                <li><a class="active" href="/">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Index</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="/posts">Reviews</a></li>
                     <li><a href="#">Contact</a></li>
             </ul>
         </nav>

@@ -14,8 +14,8 @@ define('DB_PASSWORD', 'root');
 $router = new Router($_GET['url']);
 
 $router-> get('/', 'App\Controllers\FrontController@home');
-$router-> get('posts/:id', 'App\Controllers\FrontController@show');
-$router-> get('/posts', 'App\Controllers\FrontController@index');
+$router-> get('posts/:id', 'App\Controllers\FrontController@articlereview');
+$router-> get('/posts', 'App\Controllers\FrontController@pagereview');
 $router->get('/tags/:id', 'App\Controllers\FrontController@tag');
 
 $router->get('/admin/posts', 'App\Controllers\Admin\PostController@index');

@@ -9,18 +9,17 @@ class FrontController extends Controller
         return $this->view('front.home');
     }
 
-    public function index()
+    public function pagereview()
     {
         $post = new Post($this->getDB());
         $posts = $post->all();
     }
 
-    public function show(int $id)
+    public function articlereview(int $id)
     {
         $post = new Post($this->getDB());
         $post = $post->findById($id);
 
-        return $this->view('front.show');
+        return $this->view('front.articlereview');
     }
-
 }
