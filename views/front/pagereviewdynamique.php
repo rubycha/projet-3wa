@@ -12,10 +12,9 @@
                                 </div>
                             </article>
                         </li>
-                </ul>
-                
+                        <?php endforeach ?>
+                     </ul>
 
-                  
                     <section class="boutonnumber">
                         <FORM ACTION="1.html" >
                             <INPUT TYPE="SUBMIT" VALUE="    1    ">

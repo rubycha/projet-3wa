@@ -13,7 +13,7 @@
                     The Story
                 </h3>
                 <p>
-                    <?= $params['post']->excerpt ?>
+                    <?= $params['post']->story ?>
                 </p>
                 <h3>
                     Details
