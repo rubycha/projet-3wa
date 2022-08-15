@@ -8,14 +8,14 @@ class Post extends Model {
 
     protected $table = 'posts';
 
-    public function getCreatedAt(): string
+    public function getDateCreation(): string
     {
-        return (new DateTime($this->created_at))->format('d/m/Y à H:i');
+        return (new DateTime($this->date_creation))->format('d/m/Y à H:i');
     }
 
     public function getExcerpt(): string
     {
-        return substr($this->content, 0, 200) . '...';
+        return substr($this->excerpt, 0, 200) . '...';
     }
 
     public function getButton(): string
@@ -25,12 +25,12 @@ class Post extends Model {
 HTML;
     }
 
-    public function getTags()
+    public function getCategory()
     {
         return $this->query("
-            SELECT t.* FROM tags t
-            INNER JOIN post_tag pt ON pt.tag_id = t.id
-            WHERE pt.post_id = ?
+            SELECT c.* FROM categories c
+            INNER JOIN post_in_category pic ON pic.categories_id = c.id
+            WHERE pic.post_id = ?
         ", [$this->id]);
     }
 
@@ -40,9 +40,9 @@ HTML;
 
         $id = $this->db->getPDO()->lastInsertId();
 
-        foreach ($relations as $tagId) {
-            $stmt = $this->db->getPDO()->prepare("INSERT post_tag (post_id, tag_id) VALUES (?, ?)");
-            $stmt->execute([$id, $tagId]);
+        foreach ($relations as $categoryId) {
+            $stmt = $this->db->getPDO()->prepare("INSERT post_in_category (post_id, categories_id) VALUES (?, ?)");
+            $stmt->execute([$id, $categoryId]);
         }
 
         return true;
@@ -52,12 +52,12 @@ HTML;
     {
         parent::update($id, $data);
 
-        $stmt = $this->db->getPDO()->prepare("DELETE FROM post_tag WHERE post_id = ?");
+        $stmt = $this->db->getPDO()->prepare("DELETE FROM post_in_category WHERE post_id = ?");
         $result = $stmt->execute([$id]);
 
-        foreach ($relations as $tagId) {
-            $stmt = $this->db->getPDO()->prepare("INSERT post_tag (post_id, tag_id) VALUES (?, ?)");
-            $stmt->execute([$id, $tagId]);
+        foreach ($relations as $categoryId) {
+            $stmt = $this->db->getPDO()->prepare("INSERT post_in_category (post_id, categories_id) VALUES (?, ?)");
+            $stmt->execute([$id, $categoryId]);
         }
 
         if ($result) {

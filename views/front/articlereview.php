@@ -3,6 +3,8 @@
                 <h1>
                     Reviews
                 </h1>
+
+                <small class="text-info">Publié le <?= $post->getDateCreation() ?></small>
                 <h2>
                     <?= $params ['post']->title ?>
                 </h2>
@@ -26,8 +28,8 @@
                         <span>Episodes</span> : <?= $params['post']->episodes ?>(<?= $params['post']->time ?>)
                     </p>
                     <p>
-                        <span>Genre</span> : <?php foreach ($params['post']->getTags() as $tag) : ?>
-                            <span><?= $tag->name ?></span>
+                        <span>Genre</span> : <?php foreach ($params['post']->getCategory() as $category) : ?>
+                            <span><?= $cateogry->name ?></span>
                             <?php endforeach ?>
                     </p>
                     <p>

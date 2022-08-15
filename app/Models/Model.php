@@ -17,7 +17,7 @@ abstract class Model {
 
     public function all(): array
     {
-        return $this->query("SELECT * FROM {$this->table} ORDER BY created_at DESC");
+        return $this->query("SELECT * FROM {$this->table} ORDER BY date_creation DESC");
     }
 
     public function findByID(int $id): Model
@@ -25,7 +25,7 @@ abstract class Model {
         return $this->query("SELECT * FROM {$this->table} WHERE id= ?", [$id], true);
     }
 
-    public function create(arret $data, ?arrat $realtions = null)
+    public function create(array $data, ?array $realtions = null)
     {
         $firstParenthesis = "";
         $secondParenthesis = "";
@@ -75,7 +75,7 @@ abstract class Model {
                 return $stmt->execut($param);
             }
 
-            $fetch = is_null($sting) ? 'fetchAll' : 'fetch';
+            $fetch = is_null($single) ? 'fetchAll' : 'fetch';
             $stmt = $this->db->getPDO()->$method($sql);
             $stmt->setFetchMode(PDO::FETCH_CLASS, get_class($this), [$this->db]);
         

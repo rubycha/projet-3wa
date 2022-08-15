@@ -16,14 +16,14 @@ $router = new Router($_GET['url']);
 $router-> get('/', 'App\Controllers\FrontController@home');
 $router-> get('posts/:id', 'App\Controllers\FrontController@articlereview');
 $router-> get('/posts', 'App\Controllers\FrontController@pagereview');
-$router->get('/tags/:id', 'App\Controllers\FrontController@tag');
+$router->get('/categories/:id', 'App\Controllers\FrontController@category');
 
-$router->get('/admin/posts', 'App\Controllers\Admin\PostController@index');
-$router->get('/admin/posts/create', 'App\Controllers\Admin\PostController@create');
-$router->post('/admin/posts/create', 'App\Controllers\Admin\PostController@createPost');
-$router->post('/admin/posts/delete/:id', 'App\Controllers\Admin\PostController@destroy');
-$router->get('/admin/posts/edit/:id', 'App\Controllers\Admin\PostController@edit');
-$router->post('/admin/posts/edit/:id', 'App\Controllers\Admin\PostController@update');
+$router->get('/admin/posts', 'App\Controllers\Admin\BackController@index');
+$router->get('/admin/posts/create', 'App\Controllers\Admin\BackController@create');
+$router->post('/admin/posts/create', 'App\Controllers\Admin\BackController@createPost');
+$router->post('/admin/posts/delete/:id', 'App\Controllers\Admin\BackController@delete');
+$router->get('/admin/posts/edit/:id', 'App\Controllers\Admin\BackController@edit');
+$router->post('/admin/posts/edit/:id', 'App\Controllers\Admin\BackController@update');
 
 try{
 $router->run(); 
