@@ -37,9 +37,8 @@
        <h5> Suscribe to my newsletter</h5>
        <label for="email">Email Address* :</label> <br>
        <input class="mail" type="mail" id="mail" name="mail"> <br>
-       <input class="submit" type="submit" name="SUBMIT" id="submit" value="SUBMIT">
-
-    </section>
+       <input class="submit" type="submit" name="SUBMIT" methode="POST" id="submit" value="SUBMIT">
+</section>
 </footer>
 </body>
 </html>

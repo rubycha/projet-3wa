@@ -4,7 +4,7 @@
                     Reviews
                 </h1>
 
-                <small class="text-info">Publié le <?= $post->getDateCreation() ?></small>
+                <small class="text-info">Published the <?= $params['post']->getDateCreation() ?></small>
                 <h2>
                     <?= $params ['post']->title ?>
                 </h2>
@@ -25,11 +25,11 @@
                         <span>Aired</span> : <?= $params ['post']->airing_start ?> - <?= $params ['post']->airing_end ?>
                     </p>
                     <p>
-                        <span>Episodes</span> : <?= $params['post']->episodes ?>(<?= $params['post']->time ?>)
+                        <span>Episodes</span> : <?= $params['post']->episodes ?> (Length : <?= $params['post']->time ?>)
                     </p>
                     <p>
-                        <span>Genre</span> : <?php foreach ($params['post']->getCategory() as $category) : ?>
-                            <span><?= $cateogry->name ?></span>
+                        <span>Genre</span> : <?php foreach ($params['post']->getCategories() as $category) : ?>
+                            <?= $category->category_name ?>
                             <?php endforeach ?>
                     </p>
                     <p>
@@ -41,8 +41,16 @@
                     <?= $params['post']->content ?>
                     </p>
                 </div>
-                <div class="lesboutons">
-                <button>Charge More</button>
-            </div>
+                <section class="comments">
+        <form method="post" action="ton_script_recup_data_form.php">
+            <H2>Leave a comment !</H2>
+            <p>Pseudo : <input type="text" name="pseudo" value="" /></p>
+            <p>
+                Your comment :<br />
+                <textarea name="commentaire" rows="10" cols="60"></textarea>
+            </p>
+        </form>
         </section>
+        </section>
+
       

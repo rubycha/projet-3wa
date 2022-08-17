@@ -1,18 +1,18 @@
-<h1>Administration des pages</h1>
+<h1>Page Manager</h1>
 
 <?php if(isset($_GET['success'])): ?>
-    <div class="alert alert-success">Vous êtes connecté!</div>
+    <div>You are connected!</div>
 <?php endif ?>
 
-<a href="/admin/posts/create" class="btn btn-success my-3">Créer une nouvelle page</a>
+<a href="/admin/posts/create" class="lesboutons">Create a new page</a>
 
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Titre</th>
-            <th scope="col">Publié le</th>
-            <th scope="col">Actions</th>
+            <th scope="col">Id</th>
+            <th scope="col">Published Pages</th>
+            <th scope="col">Date of Creation</th>
+            <th scope="col">Manager</th>
         </tr>
     </thead>
     <tbody>
@@ -22,9 +22,9 @@
                 <td><?= $post->title ?></td>
                 <td><?= $post->getDateCreation() ?></td>
                 <td>
-                    <a href="/admin/posts/edit/<?= $post->id ?>" class="btn btn-warning">Modifier</a>
+                    <a href="/admin/posts/edit/<?= $post->id ?>" class="lesboutons">Revise</a>
                     <form action="/admin/posts/delete/<?= $post->id ?>" method="POST" class="d-inline">
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                        <button type="submit" class="lesboutons">Delete</button>
                     </form>
                 </td>
             </tr>

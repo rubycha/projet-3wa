@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Admin;
 
-use App\Controller\Controller;
+use App\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
 
@@ -12,14 +12,14 @@ class BackController extends Controller
     {
         $this->isAdmin();
         $posts =(new Post($this->getDB()))->all();
-        return $this->view('admin.post.index', compact('posts'));
+        return $this->view('back.boindex', compact('posts'));
     }
 
     public function create()
     {
         $this->isAdmin();
         $categories =(new Category($this->getDB()))->all();
-        return $this->view('admin.post.form', compact('categories'));
+        return $this->view('back.editarticle', compact('categories'));
     }
 
     public function createPost()
@@ -39,7 +39,7 @@ class BackController extends Controller
         $this->isAdmin();
         $post = (new Post($this->getDB()))->findById($id);
         $categories =(new Category($this->getDB()))->all();
-        return $this->view('admin.post.form', compact('post', 'tags'));
+        return $this->view('back.editarticle', compact('post', 'categories'));
     }
 
     public function update(int $id)

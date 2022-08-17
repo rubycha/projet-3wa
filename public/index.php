@@ -13,10 +13,13 @@ define('DB_PASSWORD', 'root');
 
 $router = new Router($_GET['url']);
 
-$router-> get('/', 'App\Controllers\FrontController@home');
-$router-> get('posts/:id', 'App\Controllers\FrontController@articlereview');
-$router-> get('/posts', 'App\Controllers\FrontController@pagereview');
-$router->get('/categories/:id', 'App\Controllers\FrontController@category');
+$router->get('/', 'App\Controllers\FrontController@home');
+$router->get('posts/:id', 'App\Controllers\FrontController@articlereview');
+$router->get('/posts', 'App\Controllers\FrontController@pagereview');
+$router->get('/posts/contact', 'App\Controllers\FrontController@contact');
+$router->get('/posts/about', 'App\Controllers\FrontController@about');
+$router->get('/posts/index', 'App\Controllers\FrontController@indexreview');
+
 
 $router->get('/admin/posts', 'App\Controllers\Admin\BackController@index');
 $router->get('/admin/posts/create', 'App\Controllers\Admin\BackController@create');

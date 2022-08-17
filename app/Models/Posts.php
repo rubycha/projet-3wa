@@ -22,15 +22,15 @@ class Post extends Model {
     {
         return <<<HTML
         <a href="/posts/$this->id" class="lesboutons">Read it</a>
-HTML;
+        HTML;
     }
 
     public function getCategories()
     {
         return $this->query("
-        SELECT c.* FROM categories c
-        INNER JOIN post_in_category pic ON pic.category_id = c.id
-        WHERE pic.post_id = ?
+            SELECT c.* FROM categories c
+            INNER JOIN post_in_category pic ON pic.categories_id = c.id
+            WHERE pic.post_id = ?
         ", [$this->id]);
     }
 
@@ -41,7 +41,7 @@ HTML;
         $id = $this->db->getPDO()->lastInsertId();
 
         foreach ($relations as $categoryId) {
-            $stmt = $this->db->getPDO()->prepare("INSERT post_in_category (post_id, categories.id) VALUES (?, ?)");
+            $stmt = $this->db->getPDO()->prepare("INSERT post_in_category (post_id, categories_id) VALUES (?, ?)");
             $stmt->execute([$id, $categoryId]);
         }
 

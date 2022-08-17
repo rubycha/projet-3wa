@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Post;
+use App\Models\Category;
 
 class FrontController extends Controller
 {
@@ -15,7 +16,7 @@ class FrontController extends Controller
     {
         $post = new Post($this->getDB());
         $posts = $post->all();
-        return $this->view('front.pagereview', compact('posts'));
+        return $this->view('front.pagereviews', compact('posts'));
     }
 
     public function articlereview(int $id)
@@ -30,20 +31,20 @@ class FrontController extends Controller
     {
         $post = new Post($this->getDB());
         $posts = $post->findById($id);
-        return $this->view('front.about', compact('posts'));
+        return $this->view('front.about', compact('post', 'about'));
     }
 
     public function contact()
     {
         $post = new Post($this->getDB());
         $posts = $post->findById($id);
-        return $this->view('front.contact', compact('posts'));
+        return $this->view('front.contact', compact('post', 'contact'));
     }
 
     public function indexdrama()
     {
         $post = new Post($this->getDB());
         $posts = $post->findById($id);
-        return $this->view('front.indexdrama', compact('posts'));
+        return $this->view('front.indexdrama', compact('post', 'index'));
     }
 }

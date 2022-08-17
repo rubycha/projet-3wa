@@ -10,7 +10,7 @@ abstract class Model {
     protected $db;
     protected $table;
 
-    public function __construc(DBConnection $db)
+    public function __construct(DBConnection $db)
     {
         $this->db = $db;
     }
@@ -22,7 +22,7 @@ abstract class Model {
 
     public function findByID(int $id): Model
     {
-        return $this->query("SELECT * FROM {$this->table} WHERE id= ?", [$id], true);
+        return $this->query("SELECT * FROM {$this->table} WHERE id = ?", [$id], true);
     }
 
     public function create(array $data, ?array $realtions = null)
@@ -34,6 +34,7 @@ abstract class Model {
         foreach ($data as $key => $value){
             $comma = $i === count($data) ? "" : ", ";
             $firstParenthesis .= "{$key}{$comma}";
+            $secondParenthesis .= "{$key}{$comma}";
             $i++;
         }
         return $this->query("INSERT INTO {$this->table} ($firstParenthesis) VALUES($secondParenthesis)", $data);
@@ -46,7 +47,7 @@ abstract class Model {
 
         foreach ($data as $key => $value){
             $comma = $i === count($data) ? "" : ', ';
-            $sqlRequestPart /= "{$key} = :{$key}{$comma}";
+            $sqlRequestPart .= "{$key} = :{$key}{$comma}";
             $i++;
         }
 
@@ -55,7 +56,7 @@ abstract class Model {
         return $this->query("UPDATE {$this->table} SET {$sqlRequestPart} WHERE id = :id", $data);
     }
 
-    public function destroy(int $id): bool
+    public function delete(int $id): bool
     {
         return $this->query("DELETE FROM {$this->table} WHERE id=?", [$id]);
     }
@@ -72,7 +73,7 @@ abstract class Model {
 
                 $stmt = $this->db->getPDO()->$method($sql);
                 $stmt->setFetchMode(PDO::FETCH_CLASS, get_class($this), [$this->db]);
-                return $stmt->execut($param);
+                return $stmt->execute($param);
             }
 
             $fetch = is_null($single) ? 'fetchAll' : 'fetch';
