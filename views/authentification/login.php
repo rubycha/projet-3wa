@@ -1,3 +1,4 @@
+<?php $title= Login ?>
 <?php if (isset($_SESSION['error'])): ?>
 
     <?php foreach($_SESSION['error'] as $errorsArray): ?>

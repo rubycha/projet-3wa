@@ -1,4 +1,4 @@
-
+<?php $title= Index ?>
             <section class="main">
                 <h1>
                     INDEX

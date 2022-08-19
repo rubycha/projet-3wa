@@ -1,4 +1,4 @@
-
+<?php $title= Home ?>
             <section class="main">
             <div class="text">
                 <h1> Welcome to Sweet Hanguk Dreams</h1>

@@ -1,3 +1,5 @@
+<?php $title= Articles ?>
+
 <h1>Articles Manager</h1>
 
 <?php if(isset($_GET['success'])): ?>

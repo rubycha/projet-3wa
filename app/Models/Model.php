@@ -25,7 +25,7 @@ abstract class Model {
         return $this->query("SELECT * FROM {$this->table} WHERE id = ?", [$id], true);
     }
 
-    public function create(array $data, ?array $realtions = null)
+    public function create(array $data, ?array $relations = null)
     {
         $firstParenthesis = "";
         $secondParenthesis = "";

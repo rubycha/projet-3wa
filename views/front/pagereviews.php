@@ -1,4 +1,4 @@
-
+<?php $title= Reviews ?>
             <section class="main">
                 <h1>Reviews</h1>
                 <article class="imgdrama">

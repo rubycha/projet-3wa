@@ -1,4 +1,4 @@
-
+<?php $title= Welcome ?>
         <section class="dashbord-index">
             <h1>Home</h1>
             <div>
@@ -9,7 +9,7 @@
             </div>
             <div>
                 <h2>
-                    <a href="#">Articles</a>
+                    <a href="/boa">Articles</a>
                 </h2>
                 <p><a href="#">Create a new article</a> </p>
             </div>

@@ -20,6 +20,9 @@ $router->get('/contact', 'App\Controllers\FrontController@contact');
 $router->get('/about', 'App\Controllers\FrontController@about');
 $router->get('/indexdrama', 'App\Controllers\FrontController@indexdrama');
 
+$router->get('/login', 'App\Controllers\UserController@login');
+$router->post('/login', 'App\Controllers\UserController@loginPost');
+$router->get('/logout', 'App\Controllers\UserController@logout');
 
 $router->get('/admin/posts', 'App\Controllers\Admin\BackController@index');
 $router->get('/admin/posts/create', 'App\Controllers\Admin\BackController@create');

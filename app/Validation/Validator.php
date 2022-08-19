@@ -19,7 +19,7 @@ class Validator{
                 foreach ($rulesArray as $rule){
                     switch ($rule){
                         case 'required':
-                            $this->required($name, $this->date[$name]);
+                            $this->required($name, $this->data[$name]);
                             break;
                         case substr($rule, 0, 3) === 'min':
                             $this->min($name, $this->data[$name], $rule);
@@ -44,7 +44,7 @@ class Validator{
     private function min(string $name, string $value, string $rule)
     {
         preg_match_all('/(\d+)/', $rule, $matches);
-        $limit =(int) $matched[0][0];
+        $limit =(int) $matches[0][0];
 
         if (strlen($value) < $limit){
             $this->errors[$name][] ="{$name} must contain at least {$limit} characters ";

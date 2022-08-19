@@ -1,7 +1,7 @@
-<?php $title= Reviews ?>
+<?php $title= Review ?>
             <section class="main">
                 <h1>
-                    Reviews
+                    Review
                 </h1>
 
                 <small class="text-info">Published the <?= $params['post']->getDateCreation() ?></small>

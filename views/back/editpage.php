@@ -1,3 +1,4 @@
+<?php $title= Pages ?>
 <h1><?=$params['post']->title ?? 'Create a new page' ?></h1>
 
 <form action="<?= isset($params['post']) ? "admin/posts/edit/{$params['post']->id}" : "/admin/posts/create" ?>" method="POST">

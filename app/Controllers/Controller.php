@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Database\DBConnection;
+use App\Controllers\UserController;
 
 abstract class Controller{
 

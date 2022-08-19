@@ -1,4 +1,4 @@
-
+<?php $title= Comments ?>
 
     <section class="dashboard">
         <h1>Comments</h1>

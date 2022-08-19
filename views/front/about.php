@@ -1,3 +1,4 @@
+<?php $title= About ?>
 <section class="main">
     <div class="text">
         <h1> Hi, my name is Charlie</h1>

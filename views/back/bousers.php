@@ -1,4 +1,4 @@
-
+<?php $title= Users ?>
         <section class="dashboard">
         <h1>User</h1>
         

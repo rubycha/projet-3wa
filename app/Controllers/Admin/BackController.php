@@ -5,6 +5,7 @@ namespace App\Controllers\Admin;
 use App\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
+use App\Controllers\UserController;
 
 class BackController extends Controller
 {
@@ -19,7 +20,7 @@ class BackController extends Controller
     {
         $this->isAdmin();
         $categories =(new Category($this->getDB()))->all();
-        return $this->view('back.editarticle', compact('post', 'create'));
+        return $this->view('back.editarticle', compact('categories'));
     }
 
     public function createPost()
