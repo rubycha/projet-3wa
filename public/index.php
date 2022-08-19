@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use Router\Router;
 
@@ -6,7 +6,7 @@ require '../vendor/autoload.php';
 
 define('VIEWS', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR);
 define('SCRIPTS', dirname($_SERVER['SCRIPT_NAME']) . DIRECTORY_SEPARATOR);
-define('DB_NAME', 'charlottechristmas_projet');
+define('DB_NAME', 'charlottechristmas_projetfinal');
 define('DB_HOST', 'localhost:8889');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
@@ -15,10 +15,10 @@ $router = new Router($_GET['url']);
 
 $router->get('/', 'App\Controllers\FrontController@home');
 $router->get('posts/:id', 'App\Controllers\FrontController@articlereview');
-$router->get('/posts', 'App\Controllers\FrontController@pagereview');
-$router->get('/posts/contact', 'App\Controllers\FrontController@contact');
-$router->get('/posts/about', 'App\Controllers\FrontController@about');
-$router->get('/posts/index', 'App\Controllers\FrontController@indexreview');
+$router->get('/posts', 'App\Controllers\FrontController@pagereviewdynamique');
+$router->get('/contact', 'App\Controllers\FrontController@contact');
+$router->get('/about', 'App\Controllers\FrontController@about');
+$router->get('/indexdrama', 'App\Controllers\FrontController@indexdrama');
 
 
 $router->get('/admin/posts', 'App\Controllers\Admin\BackController@index');

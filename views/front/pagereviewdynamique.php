@@ -1,6 +1,6 @@
             <section class="main">
                 <h1>Reviews</h1>
-                <ul>
+                <ul class="dramapreview">
                     <?php foreach ($params ['posts'] as $post) : ?>
                         <li>
                             <article>

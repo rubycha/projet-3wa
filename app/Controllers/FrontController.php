@@ -12,11 +12,11 @@ class FrontController extends Controller
         return $this->view('front.home');
     }
 
-    public function pagereview()
+    public function pagereviewdynamique()
     {
         $post = new Post($this->getDB());
         $posts = $post->all();
-        return $this->view('front.pagereviews', compact('posts'));
+        return $this->view('front.pagereviewdynamique', compact('posts'));
     }
 
     public function articlereview(int $id)
@@ -29,22 +29,17 @@ class FrontController extends Controller
 
     public function about()
     {
-        $post = new Post($this->getDB());
-        $posts = $post->findById($id);
-        return $this->view('front.about', compact('post', 'about'));
+        return $this->view('front.about', compact('about'));
     }
 
     public function contact()
     {
-        $post = new Post($this->getDB());
-        $posts = $post->findById($id);
-        return $this->view('front.contact', compact('post', 'contact'));
+        
+        return $this->view('front.contact', compact('contact'));
     }
 
     public function indexdrama()
     {
-        $post = new Post($this->getDB());
-        $posts = $post->findById($id);
-        return $this->view('front.indexdrama', compact('post', 'index'));
+        return $this->view('front.indexdrama', compact('indexdrama'));
     }
 }

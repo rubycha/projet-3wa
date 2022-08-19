@@ -19,7 +19,7 @@ class BackController extends Controller
     {
         $this->isAdmin();
         $categories =(new Category($this->getDB()))->all();
-        return $this->view('back.editarticle', compact('categories'));
+        return $this->view('back.editarticle', compact('post', 'create'));
     }
 
     public function createPost()

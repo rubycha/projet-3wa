@@ -206,15 +206,14 @@ display: none;
     font-weight: 600;
 }
 
-
-a{
+.main li{
     text-decoration: none;
-    color:black;
 }
+
 
 /* <----- code general pour les boutons -----> */
 
-.lesboutons{
+.lesboutons{A
     align-items: center;
     justify-content: center;
     display: flex;
@@ -478,6 +477,11 @@ form textarea{
     line-height: 50px;
 }
 
+.main .listedesdramas a{
+    color: #FFBA7E;
+    text-decoration: underline black;
+}
+
 .boutonnumber{
     display: flex;
     justify-content: center;
@@ -489,6 +493,21 @@ form textarea{
     font-size: 20px;
     color:white;
     font-weight: 600;
+}
+
+/* <----- page reviews ------> */
+
+.dramapreview li{
+    list-style: none;
+    text-align: center;
+    font-family: 'SF Compact Display';
+    font-size: 20px;
+    line-height: 50px;
+}
+
+.dramapreview a{
+    color: #FFBA7E;
+    text-decoration: underline black;
 }
 
 /* <----- article review -----> */

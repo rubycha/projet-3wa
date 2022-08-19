@@ -2,7 +2,7 @@
             <section class="main">
                 <h1>
                     INDEX
-                </h1>
+                </h1> 
                 <p>
                     On this page you’ll find the <span class="orange"> list of all the Kdramas</span> i watched, the <span class="orange">score</span> i gave to them, and if there is, the <span class="orange">article linked</span> to it with my <span class="orange">full review</span>.
                 </p>
@@ -38,7 +38,7 @@
                         </li>
                         <li><span class="orange">C</span>
                         </li>
-                        <li>Chicago Typewriter<span class="orange">9/10</span>
+                        <li>Chicago Typewriter <span class="orange">9/10</span>
                         </li>
                         <li>Circle <span class="orange">9/10</span>
                         </li>
@@ -68,25 +68,25 @@
                         </li>
                         <li><span class="orange">J</span>
                         </li>
-                        <li>Jealousy Incarnate<span class="orange">9/10</span>
+                        <li>Jealousy Incarnate <span class="orange">9/10</span>
                         </li>
                         <li><span class="orange">M</span>
                         </li>
-                        <li>Master's Sun<span class="orange">9/10</span>
+                        <li>Master's Sun <span class="orange">9/10</span>
                         </li>
-                        <li>My Girl<span class="orange">8/10</span>
+                        <li>My Girl <span class="orange">8/10</span>
                         </li>
                         <li><span class="orange">P</span>
                         </li>
-                        <li>Prison Playbook<span class="orange">10/10</span>
+                        <li>Prison Playbook <span class="orange">10/10</span>
                         </li>
                         <li><span class="orange">W</span>
                         </li>
-                        <li>While You Were Sleeping<span class="orange">5/10</span>
+                        <li>While You Were Sleeping <span class="orange">5/10</span>
                         </li>
                         <li><span class="orange">Y</span>
                         </li>
-                        <li><a href="http://localhost:8888/posts/2">Yumi Cells</a><span class="orange">9/10</span>
+                        <li><a href="http://localhost:8888/posts/2">Yumi Cells </a><span class="orange">9/10</span>
                         </li>
                     </ul>
                 </div>

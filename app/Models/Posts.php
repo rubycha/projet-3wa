@@ -22,7 +22,7 @@ class Post extends Model {
     {
         return <<<HTML
         <a href="/posts/$this->id" class="lesboutons">Read it</a>
-        HTML;
+HTML;
     }
 
     public function getCategories()
