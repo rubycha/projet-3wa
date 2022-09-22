@@ -1,4 +1,4 @@
-<?php $title= Reviews ?>
+
             <section class="main">
                 <h1>Reviews</h1>
                 <ul class="dramapreview">
@@ -6,26 +6,14 @@
                         <li>
                             <article>
                                 <div class="firstdrama">
-                                    <img src="../img/TIMFL.jpeg" alt="It's My First Life"> 
+                                <img src="../img/<?= $post->image ?>" class="img-recap-reviews"> 
                                     <h4><?= $post->title ?></h4>  
                                     <?= $post->excerpt ?>
-                                    <a href="/posts/<?= $post->id ?>">Read the entire review</a> 
+                                   <p><a href="/posts/<?= $post->id ?>">Read the entire review</a></p>  
                                 </div>
                             </article>
                         </li>
                         <?php endforeach ?>
                      </ul>
-
-                    <section class="boutonnumber">
-                        <FORM ACTION="1.html" >
-                            <INPUT TYPE="SUBMIT" VALUE="    1    ">
-                          </FORM>
-                          <FORM ACTION="2.html" >
-                            <INPUT TYPE="SUBMIT" VALUE="    2    ">
-                          </FORM>
-                          <FORM ACTION="3.html" >
-                            <INPUT TYPE="SUBMIT" VALUE="    3    ">
-                          </FORM>
-                    </section>
                 </article>
             </section>

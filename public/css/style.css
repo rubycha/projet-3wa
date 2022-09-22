@@ -1,19 +1,19 @@
 
 @font-face {
     font-family: 'SF Compact Display' ;
-    src:url('../font/FontsFree-Net-SFCompactDisplay-Regular.ttf')format('ttf')
+    src:url('../font/FontsFree-Net-SFCompactDisplay-Regular.ttf'),format('ttf');
     font-weight: normal;
     font-style:normal;
 }
 
 @font-face{
     font-family: 'Opificio';
-    src:url('../font/opificio_bold_rounded.ttf')format('ttf'),
-    url('../font/opificio_bold.ttf')format('ttf'),
-    url('../font/opificio_light_rounded.ttf')format('ttf'),
-    url('../font/opificio_light.ttf')format('ttf'),
-    url('../font/opificio_regular.ttf')format('ttf'),
-    url('../font/opificio_rounded.ttf')format('ttf');
+    src:url('../font/opificio_bold_rounded.ttf'),format('ttf'),
+    url('../font/opificio_bold.ttf'),format('ttf'),
+    url('../font/opificio_light_rounded.ttf'),format('ttf'),
+    url('../font/opificio_light.ttf'),format('ttf'),
+    url('../font/opificio_regular.ttf'),format('ttf'),
+    url('../font/opificio_rounded.ttf'),format('ttf');
 
 }
 
@@ -37,6 +37,12 @@ figure {
     padding: 0;
 }
 
+h1{
+    font-size: 30px;
+    text-align: center;
+    font-family: Opificio;
+}
+
 /* <----- menu de navigation -----> */
 nav {
     display: flex;
@@ -56,6 +62,11 @@ nav {
     font-weight: 600;
     font-family: Opificio;
     margin-left: 2%;
+}
+
+.logo a{
+    text-decoration: none;
+    color:white;
 }
 
 nav ul {
@@ -162,19 +173,39 @@ input[type="checkbox"] {
 
 /* <----- premier block de chaque page -----> */
 
-.firstimg{
+.imgstreet{
 display: none;
+}
+
+@media (min-width: 1000px) {
+    .imgstreet {
+        display: block;
+        width: 50%;
+    }
 }
 
 .main{
    margin: 100px 10px 50px 10px;
 }
-
-.main h1{
-    text-align: center;
-    font-size: 30px;
-    font-family: Opificio;
+@media (min-width:1000px){
+    .main{
+      margin: 70px 10px 10px 10px;
+    }
 }
+
+@media (min-width: 1000px) {
+    .homepage {
+        display: flex;
+    }
+}
+
+@media (min-width: 1000px) {
+    .homepage .text{
+        margin-top: 150px;
+        width: 70%;
+    }
+}
+
 
 .main h2{
     text-align: center;
@@ -209,15 +240,35 @@ display: none;
 .main li{
     text-decoration: none;
 }
-
-
 /* <----- code general pour les boutons -----> */
 
-.lesboutons{A
+.lesboutons{
     align-items: center;
     justify-content: center;
     display: flex;
     flex-wrap: nowrap;
+    font-family: 'SF Compact Display';
+}
+
+.bouton1{
+    margin-right: 50px;
+}
+
+@media (min-width:1000px){
+    .homepage .lesboutons{
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .homepage button{
+        padding: 15px 38px;
+    }
+}
+
+.lesboutons a{
+    text-decoration: none;
+    color:#fff;
 }
 
 button {
@@ -229,23 +280,27 @@ button {
     font-size: 20px;
     padding: 10px 18px;
     margin: 15px 15px;
-    font-family: 'SF Compact Display';
     text-transform: uppercase;
+}
+
+.bouton1 a, .bouton2 a{
+    text-decoration: none;
 }
 
 /* <----- première section de la page home -----> */
 
 .firstsection{
     background-color: #FAF7EF; 
-    display: flex;
-    flex-wrap:wrap;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
         
 }
 
 .contentone {
     width: 100%;
 }
+
 
 .contentone p{
     font-family: Opificio;
@@ -263,6 +318,13 @@ button {
 .imgdrama h4{
     font-size: 20px;
     margin: 10px 0px 15px 0px;
+}
+
+@media (min-width:1000px){
+    .imgdrama{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .firstdrama {
@@ -403,12 +465,6 @@ color:#2C2C2C;
     margin-top: 15%;
 }
 
-.formulaire h1{
-    font-family: Opificio;
-    font-size:30px;
-    text-align: center;
-}
-
 .formulaire p{
     font-family: 'SF Compact Display';
     color: rgb(53, 53, 53);
@@ -510,11 +566,20 @@ form textarea{
     text-decoration: underline black;
 }
 
+.img-recap-reviews{
+    width: 70%;
+}
+
 /* <----- article review -----> */
 
 
 .detailsreview p{
     text-align: left;
+}
+
+.imgreview{
+    width:60%;
+    margin:auto;
 }
 
 /* <----- css du back office -----> */
@@ -528,15 +593,13 @@ form textarea{
     font-size: 20px;
 }
 
-.dashbord-index{
-    display: flex;
-    flex-wrap: wrap;
+ table .dashbord-index{
+    width: 100%;
     font-family: 'SF Compact Display';
     text-align: center;
 }
 
-.dashbord-index div {
-    border: 1px solid black; 
+.dashbord-index thead {
     width: 100%;  
 }
 
@@ -547,6 +610,10 @@ form textarea{
 .dashboard-pages{
     border: 1px solid black; 
     padding: 2%;
+}
+
+.index-bopages{
+    margin-top: 10%;
 }
 
 .timestamp{
@@ -573,3 +640,26 @@ border: 1px solid black;
 .table{
     border-collapse:collapse;
 }
+
+.btn-ajouter{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 1000px) {
+    .small {
+        display: none;
+    }
+}
+
+.large{
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .large {
+        display: block;
+        margin: 0 0 40px 500px;
+    }
+}
+

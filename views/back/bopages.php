@@ -1,4 +1,3 @@
-<?php $title= Pages ?>
 <section class="dashboard">
         <h1>Pages <button>Add a page</button></h1>
         

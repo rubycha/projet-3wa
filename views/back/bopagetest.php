@@ -1,4 +1,3 @@
-<?php $title= Pages ?>
 <h1>Page Manager</h1>
 
 <?php if(isset($_GET['success'])): ?>

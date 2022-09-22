@@ -29,17 +29,17 @@ class FrontController extends Controller
 
     public function about()
     {
-        return $this->view('front.about', compact('about'));
+        return $this->view('front.about');
     }
 
     public function contact()
     {
         
-        return $this->view('front.contact', compact('contact'));
+        return $this->view('front.contact');
     }
 
     public function indexdrama()
     {
-        return $this->view('front.indexdrama', compact('indexdrama'));
+        return $this->view('front.indexdrama');
     }
 }

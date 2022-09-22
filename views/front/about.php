@@ -1,4 +1,3 @@
-<?php $title= About ?>
 <section class="main">
     <div class="text">
         <h1> Hi, my name is Charlie</h1>
@@ -14,6 +13,7 @@
             </div>
 </section>
 
+
 <section class="aboutnumbers">
     <h3>7</h3>
     <p>Countries from where i watched dramas
@@ -26,4 +26,4 @@
     </p>
     <h3>272</h3>
     <p>Days of watching</p>
-</section>
+</section> 

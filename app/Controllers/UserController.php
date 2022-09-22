@@ -9,7 +9,7 @@ class UserController extends Controller {
 
     public function login()
     {
-        return $this->view('authentification.login');
+        return $this->view('auth.login');
     }
 
     public function loginPost()
@@ -29,10 +29,10 @@ class UserController extends Controller {
         $user = (new User($this->getDB()))->getByUsername($_POST['username']);
 
         if (password_verify($_POST['password'], $user->password)) {
-            $_SESSION['authentification'] = (int) $user->admin;
-            return header('Location: /admin/posts?success=true');
+            $_SESSION['auth'] = (int) $user->admin;
+            return header('Location: /admin/posts');
         } else {
-            return header('Location: /login');
+            return header('Location: /');
         }
     }
 

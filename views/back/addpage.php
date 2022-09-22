@@ -1,5 +1,4 @@
-<?php $title= Pages ?>
-        <section class="formulaire">
+<section class="formulaire">
             <h1>New page</h1>
             <form>
                 <div>

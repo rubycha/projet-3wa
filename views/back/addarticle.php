@@ -1,5 +1,4 @@
-<?php $title= Articles ?>
-<section class="formulaire">
+<section class="formulaire"> 
             <h1>New article</h1>
             <form>
                 <div>

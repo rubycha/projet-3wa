@@ -1,4 +1,4 @@
-<?php $title= Review ?>
+
             <section class="main">
                 <h1>
                     Review
@@ -9,7 +9,7 @@
                     <?= $params ['post']->title ?>
                 </h2>
                 <figure class="imgreview">
-                    <img  src="../img/TIMFL2.jpg" alt="">
+                <img src="../img/<?= $params ['post']->image ?>" class="img-review">
                 </figure>
                 <h3>
                     The Story

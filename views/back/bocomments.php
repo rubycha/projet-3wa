@@ -1,6 +1,4 @@
-<?php $title= Comments ?>
-
-    <section class="dashboard">
+<section class="dashboard">
         <h1>Comments</h1>
         
         <section class="dashboard-nav">

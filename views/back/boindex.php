@@ -1,24 +1,31 @@
-<?php $title= Welcome ?>
-        <section class="dashbord-index">
-            <h1>Home</h1>
-            <div>
-                <h2>
-                    <a href="#">Pages</a>
-                </h2>
-                <p><a href="#">Create a new page</a> </p>
-            </div>
-            <div>
-                <h2>
-                    <a href="/boa">Articles</a>
-                </h2>
-                <p><a href="#">Create a new article</a> </p>
-            </div>
-            <div>
-                <h2>
-                    <a href="#">Comments</a>
-                </h2>
-                <p><a href="#">Manage comments</a> </p>
-            </div>
-        </section>
-  
-        
+
+    <main class="index-bopages">
+        <div class="btn-ajouter">
+        <button class="lesboutons">Ajouter un article</button></div>
+        <article class="dashboard-index-container">
+                <table class="dashboard-index">
+                    <thead>
+                        <tr>
+                            <th>Id </th>
+                            <th>Nom</th>
+                            <th>Création</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($params ['posts'] as $post) : ?>
+                        <tr>
+                            <td> <?= $post->id ?></td>
+                            <td><span class="nom"><?= $post->title ?></span></td>
+                            <td><span class="date">30/08</span></td>
+                            <td>
+                            <button class="button-action-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="button-action-trash"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <?php endforeach ?>    
+                    </tbody>        
+                </table>
+            </article>
+    </main>
+                        

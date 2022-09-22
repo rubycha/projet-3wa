@@ -1,6 +1,4 @@
-<?php $title= Articles ?>
-
-    <section class="dashboard">
+<section class="dashboard">
         <h1>Articles <button>Add an article</button></h1>
         
         <section class="dashboard-nav">

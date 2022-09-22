@@ -1,12 +1,11 @@
 <?php 
 namespace App\Models;
-use App\Controllers\UserController;
 
 class User extends Model{
-    protected $table ='users';
+    protected $table ='user';
 
-    public function getByUsername(string $username): getByUsername
+    public function getByUsername(string $username): User
     {
-        return $this->query("SELECT * FROM {$this->table}WHERE username = ?", [$username], true);
+        return $this->query("SELECT * FROM {$this->table} WHERE username = ?", [$username], true);
     }
 }

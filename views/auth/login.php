@@ -1,7 +1,6 @@
-<?php $title= Login ?>
-<?php if (isset($_SESSION['error'])): ?>
+<?php if (isset($_SESSION['errors'])): ?>
 
-    <?php foreach($_SESSION['error'] as $errorsArray): ?>
+    <?php foreach($_SESSION['errors'] as $errorsArray): ?>
         <?php foreach($errorsArray as $errors): ?>
             <div>
                 <?php foreach($errors as $error): ?>
@@ -23,7 +22,7 @@
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" name="password" id="username">
+            <input type="password" name="password" id="password">
         </div>
         <button type="submit" class="lesboutons">Login</button>
     </form>
